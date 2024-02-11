@@ -361,7 +361,7 @@ CREATE TABLE `leave_requests` (
   PRIMARY KEY (`id`),
   KEY `FK_emp_users_id` (`empId`),
   CONSTRAINT `FK_emp_users_id` FOREIGN KEY (`empId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=276 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=283 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -371,22 +371,13 @@ CREATE TABLE `leave_requests` (
 LOCK TABLES `leave_requests` WRITE;
 /*!40000 ALTER TABLE `leave_requests` DISABLE KEYS */;
 INSERT INTO `leave_requests` VALUES
-(195,53,'2022-03-31','Imran','2022-04-01','2022-04-05',2.0,'Testing. Please disapprove',5,NULL,'Annual leave',NULL,'2022-04-01',23,'','Full Day'),
-(200,59,'2022-04-07','Naqiuddeen','2022-05-05','2022-05-06',1.0,'Celebrate Raya Aidilfitri',2,'Selamat Hari Raya','Annual leave','','2022-06-21',57,'','Full Day'),
-(201,59,'2022-04-07','Naqiuddeen','2022-05-06','2022-05-09',1.0,'Celebrate raya AidilFitri',2,'Selamat Hari Raya','Annual leave','','2022-06-21',57,'','Full Day'),
-(205,59,'2022-04-13','Naqiuddeen','2022-04-29','2022-05-02',1.0,'',2,'Selamat Hari Raya','Annual leave','','2022-06-21',57,'','Full Day'),
-(212,71,'2022-04-21','INDRA DEVI','2022-04-25','2022-04-25',0.5,'Daughter second dose vaccination',2,'','Annual leave','','2022-06-21',65,'','AM'),
-(221,63,'2022-05-09','Leong Yee Ying','2022-05-05','2022-05-06',1.0,'back hometown',2,NULL,'Annual leave','',NULL,44,'','Full Day'),
-(222,63,'2022-05-09','Leong Yee Ying','2022-05-06','2022-05-06',0.5,'',2,NULL,'Annual leave','',NULL,44,'','AM'),
-(228,72,'2022-05-19','Muhammad Adnan','2022-05-20','2022-05-24',2.0,'Leave for Wife Hospitalized for Delivery (Paternity Leave)',2,NULL,'Annual leave','Congrats',NULL,36,'leaves/72DR_1652935562.jpeg','Full Day'),
-(232,63,'2022-05-30','Leong Yee Ying','2022-06-02','2022-06-03',0.5,'house electricity service',2,NULL,'Annual leave','',NULL,44,'','PM'),
-(233,72,'2022-05-30','Muhammad Adnan','2022-05-30','2022-05-31',0.5,'Half Day Leave for Wife Medical Follow-up at 4pm',2,NULL,'Other','Approved',NULL,36,'','PM'),
-(243,70,'2022-06-07','HARRY ARIDASAN','2022-06-10','2022-06-13',0.5,'Want to go back hometown for attend family prayers.',2,NULL,'Annual leave','','2022-06-07',65,'','PM'),
-(255,63,'2022-07-04','Leong Yee Ying','2022-07-08','2022-07-11',0.5,'back hometown',2,NULL,'Annual leave','Approve','2022-07-04',44,'','PM'),
-(266,53,'2022-11-30','Imran','2022-12-01','2022-12-05',2.0,'',5,NULL,'Annual leave',NULL,'2022-11-30',73,'','Full Day'),
-(267,53,'2022-11-30','Imran','2022-12-01','2022-12-05',2.0,'',5,'nigga','Annual leave',NULL,'2022-11-30',73,'','Full Day'),
-(268,53,'2022-11-30','Imran','2022-12-01','2022-12-05',2.0,'',4,NULL,'Annual leave','','2023-06-27',73,'','Full Day'),
-(269,53,'2022-11-30','Imran','2022-12-05','2022-12-08',3.0,'',2,NULL,'Annual leave','','2023-06-27',73,'','Full Day');
+(276,38,'2024-02-09','Bartholomew','2024-02-19','2024-02-26',5.0,'Going on vacation to Aruba',0,NULL,'Annual leave',NULL,'2024-02-10',0,'leaves/38-cabanas-aerial_1707568602.jpg','Full Day'),
+(277,53,'2024-02-09','Irvin','2024-02-12','2024-02-16',4.0,'Going fishing with in-laws',4,NULL,'Annual leave','You\'re needed at work during this timeframe.','2024-02-11',63,'leaves/53-5-Lake-Fishing-Tips-_1707491268.jpg','Full Day'),
+(278,59,'2024-02-09','Norman','2024-02-26','2024-03-04',5.0,'Vacationing in Greece',0,NULL,'Annual leave',NULL,'2024-02-09',63,'leaves/59-index_1707491343.jpg','Full Day'),
+(279,63,'2024-02-09','Leon','2024-03-18','2024-03-25',5.0,'Recovering from back surgery',2,NULL,'Sick leave (Illness or Injury)','Get well soon.','2024-02-11',0,'leaves/63-Doctor-Note-Template_1707491509.jpg','Full Day'),
+(280,64,'2024-02-09','Charles','2024-03-25','2024-03-28',3.0,'',0,NULL,'Jury duty or legal leave',NULL,'2024-02-09',63,'leaves/64-Document_1707491629.jpg','Full Day'),
+(281,70,'2024-02-09','Harold','2024-04-15','2024-04-18',3.0,'Attending my grandmother\'s funeral',2,NULL,'Leave on Compassionate Grounds (Nuclear family)','Sorry for your loss.','2024-02-11',72,'','Full Day'),
+(282,70,'2024-02-09','Harold','2024-02-21','2024-02-29',6.0,'Climbing Mount Everest',0,NULL,'Annual leave',NULL,'2024-02-09',72,'leaves/70-index_1707492058.jpg','Full Day');
 /*!40000 ALTER TABLE `leave_requests` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -419,34 +410,15 @@ CREATE TABLE `leaves` (
 LOCK TABLES `leaves` WRITE;
 /*!40000 ALTER TABLE `leaves` DISABLE KEYS */;
 INSERT INTO `leaves` VALUES
-(38,15,0.0,0.0,0.0,15.0,2022,15.0,6.0),
-(53,15,0.0,0.0,6.0,9.0,2022,6.0,6.0),
-(59,15,0.0,0.0,3.0,12.0,2022,14.0,6.0),
-(63,15,0.0,0.0,2.5,12.5,2022,14.0,6.0),
-(64,15,0.0,0.0,0.0,15.0,2022,14.0,6.0),
-(70,15,0.0,0.0,0.5,14.5,2022,14.0,6.0),
-(71,15,0.0,0.0,0.5,14.5,2022,14.0,6.0),
-(72,15,1.5,0.5,2.0,13.0,2022,13.5,5.5),
-(73,15,2.0,0.0,0.0,15.0,2022,13.0,6.0),
-(53,15,0.0,0.0,0.0,5.0,2025,6.0,6.0),
-(38,15,0.0,0.0,0.0,15.0,2023,14.0,6.0),
-(63,15,0.0,0.0,0.0,15.0,2023,14.0,6.0),
-(71,15,0.0,0.0,0.0,15.0,2023,6.0,6.0),
-(72,15,0.0,0.0,0.0,15.0,2023,6.0,6.0),
-(73,15,0.0,0.0,0.0,15.0,2023,6.0,6.0),
-(53,15,0.0,0.0,0.0,15.0,2023,6.0,6.0),
-(59,15,0.0,0.0,0.0,15.0,2023,14.0,6.0),
-(64,15,0.0,0.0,0.0,15.0,2023,14.0,6.0),
-(70,15,0.0,0.0,0.0,15.0,2023,14.0,6.0),
 (38,15,0.0,0.0,0.0,15.0,2024,14.0,6.0),
-(63,15,0.0,0.0,0.0,15.0,2024,14.0,6.0),
+(63,15,5.0,0.0,0.0,15.0,2024,9.0,6.0),
 (71,15,0.0,0.0,0.0,15.0,2024,6.0,6.0),
 (72,15,0.0,0.0,0.0,15.0,2024,6.0,6.0),
 (73,15,0.0,0.0,0.0,15.0,2024,6.0,6.0),
 (53,15,0.0,0.0,0.0,15.0,2024,6.0,6.0),
 (59,15,0.0,0.0,0.0,15.0,2024,14.0,6.0),
 (64,15,0.0,0.0,0.0,15.0,2024,14.0,6.0),
-(70,15,0.0,0.0,0.0,15.0,2024,14.0,6.0);
+(70,15,0.0,3.0,0.0,15.0,2024,14.0,3.0);
 /*!40000 ALTER TABLE `leaves` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -617,15 +589,15 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
-(38,'Bartholomew','bart','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',1,1,'IDLwVpjToo6zZkCa7xViRy3ll5lP92vdhAX2jW2pcz4OoYuNWT4IQyjvldmd',1,'2021-02-17 07:02:56','2022-03-30 08:18:18',0,0,NULL,50,12,'bart@m.com',0,4),
-(53,'Irvin','irvin','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',-2,1,'DqhceIir6sh2v60Yip2qyHLltbdoLg2EM7aHAU1NCNpXS7UliCjOmhORIs3R',1,'2022-02-14 12:03:04','2022-06-09 06:10:53',0,0,NULL,1,13,'irvin@m.com',63,1),
-(59,'Norman','norman','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',-2,1,'JfkFL9iTLvJxiwh8gZ87nyaRAdt7gnnMAbrewELvt6ghkKk81WhOMz36zwB4',1,'2022-03-29 08:17:05','2022-03-29 08:21:09',0,0,NULL,28,13,'norman@m.com',63,7),
-(63,'Leon','leon','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',1,1,'Ji9J70pkhnU8rsfNDmFejAxcaUWDP6Gj46mmaUCB2S26BzgNhpfOtgrHIBXA',1,'2022-04-15 07:47:13','2022-04-15 08:02:33',0,0,NULL,53,12,'leon@m.com',0,10),
-(64,'Charles','charles','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',-2,1,NULL,1,'2022-04-18 04:00:31','2022-07-01 10:14:37',0,0,NULL,56,13,'charles@m.com',63,9),
-(70,'Harold','harold','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',-2,1,NULL,1,'2022-04-18 04:13:57','2022-04-18 04:21:33',0,0,NULL,43,13,'harold@m.com',72,12),
-(71,'Indra','indra','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',-2,1,'XHInnO5ngWd0fnuIIuxQrbxnqVkGXbIceL2BSKrVd8Q6rLYclEPvD0nUH539',1,'2022-04-18 05:55:15','2022-05-06 03:31:23',0,0,NULL,15,12,'indra@m.com',72,3),
-(72,'Danny','danny','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',1,1,'Cih4Yt0Oh7Kx9w8Y5lDFfAVkhxPTSLBzNtBIZkxOmF2SlKYIWawTE6odWX8n',1,'2020-04-14 23:36:42','2022-06-09 06:12:02',0,0,NULL,1,12,'danny@m.com',82,4),
-(73,'Sam','sam','$2a$12$L1yhNdO7B8AKTeknm/bws.pRTcNvuBz8/JXmuriWMS1uLfhx7u/EC',0,1,'uySGOUo9xr80Lb8tNXtKuMApHiZcCdl8cRUHjKvEUGJtNlMG2xudxZ5oA907',1,'2021-02-15 23:19:12','2021-06-20 23:00:44',0,0,NULL,4,12,'sam@m.com',0,1);
+(38,'Bartholomew','bart','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',1,1,'AfQb7IvFsEztulV7RBnBRzPOsCQCC5hFBvq2tZGvh6sApmy4BqDn45K3idQp',1,'2021-02-17 07:02:56','2022-03-30 08:18:18',0,0,NULL,50,12,'bart@m.com',0,4),
+(53,'Irvin','irvin','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',-2,1,'vMC7lP7djXSse5Kz17RC80O3D6c0SlFFhQ0wzEXm7neclfNB7jOLh350J1kJ',1,'2022-02-14 12:03:04','2022-06-09 06:10:53',0,0,NULL,1,13,'irvin@m.com',63,1),
+(59,'Norman','norman','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',-2,1,'laaa9e8XkfYAzEPKxBuDDzAeIzSCu6ik8heFdSjI7PC20rYJhnBvXfKyhlMG',1,'2022-03-29 08:17:05','2022-03-29 08:21:09',0,0,NULL,28,13,'norman@m.com',63,7),
+(63,'Leon','leon','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',1,1,'dPnoeCLDPC7LMArAWj93N6kgKdBg1vW3T1WAdic6awPPSpBkAdyq0rsd8ORk',1,'2022-04-15 07:47:13','2022-04-15 08:02:33',0,0,NULL,53,12,'leon@m.com',0,10),
+(64,'Charles','charles','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',-2,1,NULL,1,'2022-04-18 04:00:31','2022-07-01 10:14:37',0,0,NULL,56,13,'charles@m.com',63,9),
+(70,'Harold','harold','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',-2,1,NULL,1,'2022-04-18 04:13:57','2022-04-18 04:21:33',0,0,NULL,43,13,'harold@m.com',72,12),
+(71,'Indra','indra','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',-2,1,'XHInnO5ngWd0fnuIIuxQrbxnqVkGXbIceL2BSKrVd8Q6rLYclEPvD0nUH539',1,'2022-04-18 05:55:15','2022-05-06 03:31:23',0,0,NULL,15,12,'indra@m.com',72,3),
+(72,'Danny','danny','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',1,1,'cfEs17ovzhbZyJIjxgAnrPukub8gkj4A7aUpTDbEe2GAbJjcqH9fHOdOn4n8',1,'2020-04-14 23:36:42','2022-06-09 06:12:02',0,0,NULL,1,12,'danny@m.com',82,4),
+(73,'Sam','sam','$2a$12$5D.pAKRMdg5V.OdvME/HEeeZRUvlNi0qef8o3u68J7OlcejEVQmJC',0,1,'s6IGybLvDpvPsJMWzy2dYveEbO44y11l5DhAoQSY8ucFMbfHyKCqEihzw1uA',1,'2021-02-15 23:19:12','2021-06-20 23:00:44',0,0,NULL,4,12,'sam@m.com',0,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -638,4 +610,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-23 15:58:52
+-- Dump completed on 2024-02-11 19:50:52

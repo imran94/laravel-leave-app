@@ -2,7 +2,7 @@ A web portal made in Laravel for the purpose of company employees to apply for l
 
 ## To run the program:
 
-1. Import the database into your MySQL server through the provided sql file.
+1. Import the database from the provided sql file into your MySQL server.
 2. Point to the database in the .env file.
 3. If you wish to test the email feature, set your email server credentials as well in the .env file.
 4. Install dependencies via `composer install`
