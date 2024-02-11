@@ -1,0 +1,1 @@
+php artisan serve --host=0.0.0.0 --port=7800 > /var/demo/logs/leave_application/portal/out.log 2>&1&
